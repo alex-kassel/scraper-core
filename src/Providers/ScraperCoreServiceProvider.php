@@ -13,6 +13,8 @@ class ScraperCoreServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        $this->mergeConfigFrom(__DIR__ . '/../../config/scraper-core.php', 'scraper-core');
+
         $this->app->singleton(ExecutionLockManager::class);
         $this->app->singleton(FingerprintComparator::class);
         $this->app->singleton(CoreLifecycleBundle::class);
@@ -22,10 +24,16 @@ class ScraperCoreServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../../config/scraper-core.php' => config_path('scraper-core.php'),
             ], 'scraper-core-config');
+
+            $this->publishes([
+                __DIR__ . '/../../database/migrations' => database_path('migrations'),
+            ], 'scraper-core-migrations');
         }
     }
 }
