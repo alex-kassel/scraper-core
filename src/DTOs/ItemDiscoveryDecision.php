@@ -2,7 +2,7 @@
 
 namespace AlexKassel\ScraperCore\DTOs;
 
-use AlexKassel\PlatformContracts\StepContextInterface;
+use AlexKassel\ScraperCore\Contracts\StepContextInterface;
 use AlexKassel\ScraperCore\Enums\ItemDiscoveryClassification;
 
 class ItemDiscoveryDecision implements StepContextInterface

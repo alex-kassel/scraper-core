@@ -3,7 +3,7 @@
 namespace AlexKassel\ScraperCore\DTOs;
 
 use Throwable;
-use AlexKassel\PlatformContracts\ResultContextInterface;
+use AlexKassel\ScraperCore\Contracts\ResultContextInterface;
 
 readonly class SpiderRunFailedPayload implements ResultContextInterface
 {

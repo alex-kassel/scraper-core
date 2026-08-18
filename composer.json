@@ -50,8 +50,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AlexKassel\\ScraperCore\\": "src/",
-            "AlexKassel\\PlatformContracts\\": "src/Contracts/PlatformContracts/"
+            "AlexKassel\\ScraperCore\\": "src/"
         }
     },
     "autoload-dev": {

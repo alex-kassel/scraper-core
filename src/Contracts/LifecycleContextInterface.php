@@ -1,6 +1,6 @@
 <?php
 
-namespace AlexKassel\PlatformContracts;
+namespace AlexKassel\ScraperCore\Contracts;
 
 interface LifecycleContextInterface
 {

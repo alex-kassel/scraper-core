@@ -2,7 +2,7 @@
 
 namespace AlexKassel\ScraperCore\DTOs;
 
-use AlexKassel\PlatformContracts\LifecycleContextInterface;
+use AlexKassel\ScraperCore\Contracts\LifecycleContextInterface;
 use AlexKassel\ScraperCore\Enums\PipelineMode;
 
 readonly class SpiderRunContext implements LifecycleContextInterface

@@ -2,17 +2,20 @@
 
 namespace AlexKassel\ScraperCore\Lifecycle;
 
-use AlexKassel\PlatformContracts\AbstractLifecycleExtension;
-use AlexKassel\PlatformContracts\LifecycleContextInterface;
-use AlexKassel\PlatformContracts\StepContextInterface;
-use AlexKassel\PlatformContracts\ResultContextInterface;
+use AlexKassel\ScraperCore\Contracts\ScraperLifecycleExtensionInterface;
+use AlexKassel\ScraperCore\Contracts\LifecycleContextInterface;
+use AlexKassel\ScraperCore\Contracts\StepContextInterface;
+use AlexKassel\ScraperCore\Contracts\ResultContextInterface;
 use AlexKassel\ScraperCore\DTOs\SpiderRunContext;
 use AlexKassel\ScraperCore\DTOs\ItemDiscoveryDecision;
 use AlexKassel\ScraperCore\DTOs\SpiderRunFinishedPayload;
 use AlexKassel\ScraperCore\DTOs\SpiderRunFailedPayload;
 
-abstract class AbstractScraperLifecycleExtension extends AbstractLifecycleExtension
+abstract class AbstractScraperLifecycleExtension implements ScraperLifecycleExtensionInterface
 {
+    public function boot(LifecycleContextInterface $context): void {}
+    public function shutdown(LifecycleContextInterface $context): void {}
+
     final public function beforeProcess(LifecycleContextInterface $context): void
     {
         if ($context instanceof SpiderRunContext) {

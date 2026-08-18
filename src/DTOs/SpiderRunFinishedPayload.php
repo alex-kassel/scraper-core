@@ -2,7 +2,7 @@
 
 namespace AlexKassel\ScraperCore\DTOs;
 
-use AlexKassel\PlatformContracts\ResultContextInterface;
+use AlexKassel\ScraperCore\Contracts\ResultContextInterface;
 
 readonly class SpiderRunFinishedPayload implements ResultContextInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AlexKassel\PlatformContracts;
+namespace AlexKassel\ScraperCore\Contracts;
 
-interface LifecycleExtensionInterface
+interface ScraperLifecycleExtensionInterface
 {
     public function boot(LifecycleContextInterface $context): void;
     public function beforeProcess(LifecycleContextInterface $context): void;
