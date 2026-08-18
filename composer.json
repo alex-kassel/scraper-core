@@ -1,0 +1,78 @@
+{
+    "name": "alex-kassel/scraper-core",
+    "description": "Enterprise scraping engine for Laravel providing Roach PHP integration, atomic item discovery lifecycle management, stable fingerprint comparison, commit-before-dispatch event intents, batch watermark persistence buffers, and overlapping run lock management.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Macenko",
+            "email": "alexander.macenko@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/alex-kassel/scraper-core",
+    "support": {
+        "issues": "https://github.com/alex-kassel/scraper-core/issues",
+        "source": "https://github.com/alex-kassel/scraper-core"
+    },
+    "keywords": [
+        "laravel",
+        "scraper",
+        "scraping",
+        "roach-php",
+        "fingerprint",
+        "lifecycle",
+        "crawling",
+        "spider"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "alex-kassel/laravel-domain-core": "@dev",
+        "alex-kassel/stable-fingerprint": "@dev",
+        "alex-kassel/laravel-actionable-diagnostics": "@dev",
+        "roach-php/core": "^1.0 || ^2.0 || ^3.0",
+        "monolog/monolog": "^2.3 || ^3.0",
+        "illuminate/cache": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/console": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/database": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/events": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexKassel\\ScraperCore\\": "src/",
+            "AlexKassel\\PlatformContracts\\": "src/Contracts/PlatformContracts/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlexKassel\\ScraperCore\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlexKassel\\ScraperCore\\Providers\\ScraperCoreServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
